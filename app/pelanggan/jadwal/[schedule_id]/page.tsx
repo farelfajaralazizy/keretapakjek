@@ -54,13 +54,13 @@ const getScheduleDetail = async (schedule_id: number): Promise<ScheduleType | nu
 }
 
 type props = {
-    params: {
+    params: Promise<{
         schedule_id: number
-    }
+    }>
 }
 
 const KeretaDetailPage = async (myProp:props) => {
-    const schedule_id = myProp.params.schedule_id
+    const schedule_id = (await myProp.params).schedule_id
     const detailSchedule = await getScheduleDetail(schedule_id)
     const detailKereta = await getTrainBySchedule(schedule_id)
     return (

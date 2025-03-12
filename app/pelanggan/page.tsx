@@ -1,8 +1,8 @@
 import { getServerCookie } from "@/helper/server-cookie"
-import { UserType } from "../types"
 import axiosInstance from "@/helper/api"
 import Pelanggan from "./Pelanggan"
 import AddPelanggan from "./addPelanggan"
+import { UserType } from "../Karyawan/types"
 
 const PelangganPage = async () => {
     /** call function to "data kereta"

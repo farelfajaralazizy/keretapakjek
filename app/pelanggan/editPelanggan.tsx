@@ -6,7 +6,8 @@ import Modal from "@/components/Modal";
 import { toast, ToastContainer } from "react-toastify"
 import { getCookie } from "@/helper/client-cookie";
 import axiosInstance from "@/helper/api";
-import { UserType } from "../types";
+import { UserType } from "../Karyawan/types";
+
 
 type props = {
     pelanggan: UserType

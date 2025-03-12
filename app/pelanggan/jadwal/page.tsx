@@ -5,10 +5,10 @@ import { ScheduleType } from "@/app/Karyawan/types"
 import Schedule from "./Schedule"
 
 type props = {
-    searchParams: {
+    searchParams: Promise<{
         departured_location?: string,
         arrived_location?: string 
-    }
+    }>
 }
 
 const getJadwal = async (
